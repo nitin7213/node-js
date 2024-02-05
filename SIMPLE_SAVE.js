@@ -34,7 +34,7 @@ console.log(d);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const obj = {
-  name: "nitin",
+  name: 'nitin',
   age: 23,
   height: 34,
 };
@@ -44,7 +44,7 @@ Object.freeze(arr);
 Object.freeze(obj);
 
 arr[2] = 23; //added the key
-arr["age"] = 56;
+arr['age'] = 56;
 
 console.log(arr);
 console.log(obj);
@@ -55,14 +55,14 @@ console.log(obj);
 ///Different types of function
 
 function show() {
-  console.log("Normal function");
+  console.log('Normal function');
 }
 show();
 
 //assigning function
 
 const display = function show() {
-  console.log("function passing and cannot run show() func");
+  console.log('function passing and cannot run show() func');
 };
 display();
 
@@ -70,7 +70,7 @@ display();
 ////removed function and function name
 
 const greet = () => {
-  console.log("greeted"); //// Arrow Function
+  console.log('greeted'); //// Arrow Function
 };
 
 greet();
@@ -88,22 +88,22 @@ const sum = (a, b) => a + b; /// Implicit type
 console.log(sum(1, 2));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-this.objectName = "export func"; ///objectName is a property of this
+this.objectName = 'export func'; ///objectName is a property of this
 console.log(this);
 
 const obj = {
-  name: "nitin",
+  name: 'nitin',
   age: 23,
   id: 1,
 
   //Regular function
   fun1: function () {
-    console.log("func1", this); // here 'this' refers to caller function
+    console.log('func1', this); // here 'this' refers to caller function
   },
 
   //Arrow Function
   fun2: () => {
-    console.log("func2", this); // 'this' will return export function
+    console.log('func2', this); // 'this' will return export function
   },
 };
 obj.fun1();
@@ -113,10 +113,10 @@ obj.fun2();
 ///Object Literals
 
 const obj = {
-  str: "helloo everybody",
+  str: 'helloo everybody',
   num: 34,
   isCheck: true,
-  images: ["nit.gif", "cat.png", "dog.jpg", "ankit.jpeg"], //Array
+  images: ['nit.gif', 'cat.png', 'dog.jpg', 'ankit.jpeg'], //Array
   pos: {
     x: 23, ///nested object
     y: 34,
@@ -127,11 +127,11 @@ const obj = {
   },
 
   dif() {
-    console.log("difference"); // just name
+    console.log('difference'); // just name
   },
 
   greet: () => {
-    console.log("greet"); ///arrow func
+    console.log('greet'); ///arrow func
   },
 };
 
@@ -148,11 +148,11 @@ console.log(obj.dif());
 console.log(obj.greet());
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const she = "women";
+const she = 'women';
 const PI = Math.PI;
 
 const obj = {
-  [she]: "ladki", /// she is replace by women
+  [she]: 'ladki', /// she is replace by women
   PI, ////  we can just use PI on the place of PI:PI
 };
 console.log(obj.women);
@@ -161,7 +161,7 @@ console.log(obj);
 //Adding new property in obj
 
 obj.a = 2;
-obj["he"] = "ladka";
+obj['he'] = 'ladka';
 console.log(obj);
 console.log(obj.PI);
 
@@ -177,7 +177,7 @@ console.log(PI); ///Now I can use these function without Math object
 
 ///In this we tried to destructured the class and extract values through it
 
-const { readFile } = require("fs"); ///Also Destructured
+const { readFile } = require('fs'); ///Also Destructured
 
 const circle = {
   r: 2,
@@ -212,8 +212,8 @@ class Dog extends Animal {
   }
 }
 
-const obj = new Animal("yellow");
-const obj2 = new Dog("red", "labrador");
+const obj = new Animal('yellow');
+const obj2 = new Dog('red', 'labrador');
 
 obj.greet();
 obj2.greet();
@@ -234,7 +234,7 @@ obj2.greet();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Event Loop:
-//     Continuously checks the call stack and callback queue.
+//     Continuously checks the 'call stack' and 'callback queue'.
 // If the call stack is empty, it takes the first task from the microtask queue and pushes it onto the call stack.
 // If the microtask queue is empty, it looks at the callback queue and pushes the first task onto the call stack.
 // Facilitates the non - blocking nature of JavaScript.
@@ -276,8 +276,7 @@ Timeout
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Starvation:
-//     Too many microtasks generated without giving time
-// for callback tasks to execute can lead to starvation.
+//     Too many microtasks generated without giving time for callback tasks to execute can lead to starvation.
 // It 's essential to balance the execution of microtasks and callback tasks to avoid potential issues.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

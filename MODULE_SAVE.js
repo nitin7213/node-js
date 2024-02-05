@@ -13,21 +13,21 @@ getArgs(1, 2, 3, 4, 5, 6, 7, 8);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////For requiring it --->>
 
-const myExport = require("./MODULE_SAVE.js"); ///  './' refers to parent directory
+const myExport = require('./MODULE_SAVE.js'); ///  './' refers to parent directory
 
 console.log(myExport.a);
 console.log(myExport.getFun());
 
 ////OR Destructuring way-->
 
-const { a, getFun } = require("./MODULE_SAVE.js");
+const { a, getFun } = require('./MODULE_SAVE.js');
 
 console.log(a);
 console.log(getFun());
 let a = 23; ///variable
 
 let getFun = () => {
-  console.log("export"); ///function     1st way
+  console.log('export'); ///function     1st way
 };
 
 module.exports = {
@@ -42,7 +42,7 @@ module.exports = {
 exports.a = 23; ///variable
 
 exports.getFun = () => {
-  console.log("export function");
+  console.log('export function');
 };
 
 console.log(exports.a); ///only work like this
@@ -53,7 +53,7 @@ exports.getFun();
 const a = 34;
 
 function getFun() {
-  console.log("export function");
+  console.log('export function');
 }
 module.exports.a = a;
 module.exports.getFun = getFun;
@@ -62,6 +62,6 @@ module.exports.getFun = getFun;
 const a = 45;
 
 function getFun() {
-  console.log("export function");
+  console.log('export function');
 }
 module.exports = { a, getFun }; /// another way of exporting

@@ -40,9 +40,11 @@ git reset --hard commit hash ->
 ---setup normal local -----
 git init 
 git branch -M main
-git remote add origin <new ssh>(git@github.com:nitin7213/react-js.git)--->> make a new ssh in github new repo
+git remote add origin <new ssh>(git@github.com:nitin7213/react-js.git)--->> Or use https (git remote add origin https://github.com/nitin7213/node-js.git)
 git add .
 git commit -m "episode-1"
 git push origin main
 
+
 git clone <ssh> ---> for cloning files from github to local
+git clone <https link>
