@@ -1,13 +1,15 @@
 /// Synchronously Connecting to database
 const mySql = require('mysql2');
 
-const con = mySql.createConnection({
+const config = {
   host: 'localhost',
   user: 'root',
   password: '1194',
   database: 'testify',
   port: 3306,
-});
+};
+
+const con = mySql.createConnection(config);
 
 con.connect((err) => {
   if (err) {
