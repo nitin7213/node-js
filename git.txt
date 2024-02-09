@@ -43,3 +43,5 @@ git reset <commit hash> --->You can then decide whether to commit, discard, or m
 git reset --hard commit hash ---> (It will remove all the modified changes)
 
 
+---Git Ignore File-----
+.gitignore --> We doesn't need to put push this in 'Git' as we can recover node packages from package.json using 'npm install'.
