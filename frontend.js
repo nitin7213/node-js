@@ -71,7 +71,7 @@ Random - gives you number between 0 and 1
 // and it has 0 arguments
 // does: it logs out your name to the console
 function sayMyName() {
-  console.log("Qazi");
+  console.log('Qazi');
 }
 
 // sayMyName()

@@ -1,7 +1,8 @@
 // Event Loop:
 // Continuously checks the 'call stack' and 'callback queue'.
 // If the call stack is empty, it takes the first task from the microtask queue and pushes it onto the call stack.
-// If the microtask queue is empty, it looks at the callback queue and pushes the first task onto the call stack.
+// If the microtask queue is empty, it looks at the callback queue and pushes the first completed task onto the call stack.
+// Shorter timeout callbacks execute first, regardless of addition order.
 // Facilitates the non - blocking nature of JavaScript.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Call Stack:

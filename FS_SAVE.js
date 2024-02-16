@@ -43,7 +43,7 @@ fs.readFile('index.html', 'utf8', (err, data) => {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //ASynchronous read file using ASync/Await
 
-const fs = require('fs').promises; //Async
+const fs = require('fs/promises'); // require('fs').promises; //Async
 
 async function getRead() {
   const data = await fs.readFile('index.html', 'utf8');
@@ -59,7 +59,7 @@ async function getWrite() {
 getWrite();
 
 // read a file and write on another ASynchronously using ASync/Await
-const fs = require('fs').promises;
+const fs = require('fs/promises');
 
 async function getBoth() {
   const data = await fs.readFile('index.html', 'utf8');
@@ -71,7 +71,7 @@ getBoth();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///Using three function 1.read 2. write 3.access both
 
-const fs = require('fs').promises; //promise
+const fs = require('fs/promises'); //promise
 
 async function getRead(inputUrl) {
   return await fs.readFile(inputUrl, 'utf8'); //promise
@@ -91,7 +91,7 @@ doIt('index.html', 'sample.txt');
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///Use try and catch to handle error
 
-const fs = require('fs').promises;
+const fs = require('fs/promises');
 
 async function getRead(inputUrl) {
   try {

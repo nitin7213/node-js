@@ -7,12 +7,16 @@ mkdir -> to make directory
 ---setup normal local -----
 git -v
 git init 
-git remote add origin git@github.com:nitin7213/react-js.git--->> make a new ssh in github new repo
+git remote add origin <ssh/http>--->> make a new ssh in github new repo
 git branch -M main
 git add .
 git commit -m "episode-1"
 git status
-git push origin main
+git push origin main 
+git push -f origin main --> Force Push
+
+
+
 
 
 
@@ -45,3 +49,11 @@ git reset --hard commit hash ---> (It will remove all the modified changes)
 
 ---Git Ignore File-----
 .gitignore --> We doesn't need to put push this in 'Git' as we can recover node packages from package.json using 'npm install'.
+
+---------Remove running git 'add' process----------
+rm .git/index.lock
+
+
+---Remove Git Remote-----
+git remote -v  --> check connected remote
+git remote remove origin

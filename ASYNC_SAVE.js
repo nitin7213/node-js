@@ -87,7 +87,7 @@ const p = new Promise((res, rej) => {
 (async () => {
   console.log('first');
 
-  //async now it pushes it into callback queue and event loop will bring the resolved promised back
+  //async now it pushes it into micro queue and event loop will bring the resolved promised back
   p.then((res) => {
     console.log(res);
   });

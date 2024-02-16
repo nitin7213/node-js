@@ -251,8 +251,8 @@ console.log(parsedUrl.host);
 console.log(parsedUrl.pathname);
 console.log(parsedUrl.search);
 
-console.log(parsed.query.country);
-console.log(parsed.query.city);
+console.log(parsedUrl.query.country);
+console.log(parsedUrl.query.city);
 
 /*OUTPUT
 localhost:9000
@@ -271,7 +271,7 @@ const url = require('url');
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' }); // text/json is also there
   const parsed = url.parse(req.url, true); //true, parses the query string into an object
-  const name = parsed.query.name || 'N/A';
+  const name = parsed.query.name || 'N/A'; // NA should be there by chance if not have argument return error
   const age = parsed.query.age || 'N/A';
   const host = req.headers.host || 'N/A'; //req.headers.host--> for hostname
 
