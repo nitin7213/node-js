@@ -16,7 +16,7 @@ getArgs(1, 2, 3, 4, 5, 6, 7, 8);
 const myExport = require('./MODULE_SAVE.js'); ///  './' refers to parent directory
 
 console.log(myExport.a);
-console.log(myExport.getFun());
+myExport.getFun();
 
 ////OR Destructuring way-->
 
@@ -28,7 +28,7 @@ getFun();
 let a = 23; ///variable
 
 let getFun = () => {
-  console.log('export'); ///function     1st way
+  console.log('export'); ///function   1st way
 };
 
 module.exports = {

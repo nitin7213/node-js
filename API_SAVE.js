@@ -1,7 +1,7 @@
 ////////How to Fetch api: Fetch->response(readable stream)->json() (also a promise)---> JSON.stringify(to print in string)
 ///JSON.stringify-->>>converts {} to "{}"
 
-const API_URL = 'https://api.github.com/users/nitin7213';
+const API_URL = 'http://localhost:3000/courses';
 
 async function getApi() {
   const res = await fetch(API_URL); //fetch is a promise and returns a readable stream to convert it to json add .json()
@@ -21,16 +21,13 @@ const API_URL = 'https://api.github.com/users/nitin7213';
 
 async function getApi() {
   try {
-    const res = await fetch(API_URL); //fetch is a promise and returns a readable stream to convert it to json add .json()
+    const response = await fetch(API_URL); //fetch is a promise and returns a readable stream to convert it to json add .json()
 
-    if (!res.ok) throw new Error('error 404');
-    // an HTTP response status in the range of 200 to 299
-    // (inclusive) is considered successful.Therefore, response.ok will be
-    // true if the status is within this range, and false otherwise.
+    if (!response.ok) throw new Error('error 404'); // an HTTP response status in the range of 200 to 299
 
-    const result = await res.json(); /// .json is also a promise & also we can use 'response.text()'
+    const result = await response.json(); /// .json is also a promise & also we can use 'response.text()'
 
-    const data = JSON.stringify(
+    const str = JSON.stringify(
       result,
       function (key, value) {
         if (key == 'id') return undefined; /// Filtering
@@ -91,7 +88,7 @@ getApi();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////FETCH API using 'then' &'catch' & WRITE in a file
 
-const API_URL = 'https://api.github.com/users/nitin7213';
+const API_URL = 'http://localhost:3000/courses';
 
 const fs = require('fs');
 
@@ -145,7 +142,7 @@ Unlike then, the value is directly assigned to the variable or expression follow
 */
 /////Then/Catch chaining
 
-const API_URL = 'https://api.github.com/users/nitin7213';
+const API_URL = 'http://localhost:3000/courses';
 
 const fs = require('fs');
 
@@ -185,6 +182,100 @@ async function getData() {
 getData();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///Using AXIOS(new)
+
+const axios = require('axios');
+const API_URL = 'http://localhost:3000/courses';
+
+async function getApi() {
+  const response = await axios(API_URL); //return a promise
+  console.log(response);
+}
+
+getApi();
+
+/*
+AXIOS OBJECTS:
+Response
+├── data // Response body
+├── status // HTTP status code
+├── statusText // Textual representation of status code (e.g., "OK" for 200)
+├── headers // Response headers
+│   ├── content-type
+│   ├── content-length
+│   └── ...
+├── config // Axios request configuration
+│   ├── url
+│   ├── method
+│   └── ...
+└── request // XMLHttpRequest object (in browser) or http.ClientRequest object (in Node.js)
+    ├── method
+    ├── url
+    └── ...
+*/
+
+//Fetch data using axios from JSON --> axios.get(url);
+const axios = require('axios');
+const API_URL = 'http://localhost:3000/courses';
+
+async function getApi() {
+  const response = await axios.get(API_URL); //return a promise
+
+  const str = JSON.stringify(response.data, null, 2);
+  console.log(str);
+}
+getApi();
+
+//Submit form data on json with AXIOS ----> axios.post(url);
+const axios = require('axios');
+const API_URL = 'http://localhost:3000/courses';
+
+const data = {
+  courseName: 'Course Name',
+  authorName: 'Author Name',
+  courseDuration: 'Duration: Updated',
+  courseRating: 'Rating: Updated',
+};
+
+async function createCourse() {
+  const response = await axios.post(API_URL, data);
+
+  console.log(response.data);
+}
+createCourse();
+
+//Update json with AXIOS ----> axios.put(url);
+const axios = require('axios');
+const API_URL = 'http://localhost:3000/courses';
+
+const newId = 1;
+const data = {
+  id: newId,
+  courseName: 'Course Name',
+  authorName: 'Author Name',
+  courseDuration: 'Duration: Updated',
+  courseRating: 'Rating: Updated',
+};
+
+async function updatedData() {
+  const response = await axios.put(`${API_URL}/${newId}`, data);
+
+  console.log(response.data);
+}
+updatedData();
+
+//Delete specified resource of json ----> axios.delete(url);
+const axios = require('axios');
+const API_URL = 'http://localhost:3000/courses';
+
+const id = '9';
+
+async function deleteCourse() {
+  const response = await axios.delete(`${API_URL}/${id}`);
+
+  console.log(response.data);
+}
+deleteCourse();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

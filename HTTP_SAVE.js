@@ -53,14 +53,10 @@ const http = require('http');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
-  try {
-    const str = fs.readFileSync('index.html', 'utf8');
-    res.writeHead(800, { 'content-type': 'text/html' });
-    res.write(str);
-    res.end();
-  } catch (err) {
-    console.log(err);
-  }
+  const str = fs.readFileSync('index.html', 'utf8');
+  res.writeHead(800, { 'content-type': 'text/html' });
+  res.write(str);
+  res.end();
 });
 
 server.listen(8000, () => {
@@ -95,7 +91,7 @@ server.listen(PORT, () => {
 
 /////////Using Async/await
 const http = require('http');
-const fs = require('fs').promises; //because Async
+const fs = require('fs/promises'); //because Async
 
 const server = http.createServer(async (req, res) => {
   try {
@@ -140,34 +136,9 @@ server.listen(8000, () => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////Reading a file in ASync (different function)
 
-//////////Using Callbacks
-const http = require('http');
-const fs = require('fs').promises;
-
-//Read function
-function readFile() {
-  const data = fs.readFile('index.html', 'utf8');
-  return data;
-}
-
-/// Server Start
-const server = http.createServer((req, res) => {
-  const data = readFile();
-
-  data.then((response) => {
-    res.writeHead(200, { 'content-type': 'text/html' });
-    res.write(response);
-    res.end();
-  });
-});
-
-server.listen(8000, () => {
-  console.log('addr: http://localhost:8000');
-});
-
 /////////Using Async/await
 const http = require('http');
-const fs = require('fs').promises; //async
+const fs = require('fs/promises'); //async
 
 //Read function
 async function readFile() {
@@ -203,7 +174,15 @@ const server = http.createServer(reqListener);
 server.listen(8000, () => {
   console.log('http://localhost:8000');
 });
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+Http Methods: Not used much
+GET: Retrieve data from a server using a URL.
+POST: Send data to a server to create a resource.
+PUT: Update an existing resource on the server.(File Upload)
+DELETE: Remove a resource from the server.
+PATCH: Partially update a resource on the server.(Update)
+*/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Use of  req.url === "/"
 const http = require('http');
@@ -254,16 +233,25 @@ console.log(parsedUrl.search);
 console.log(parsedUrl.query.country);
 console.log(parsedUrl.query.city);
 
-/*OUTPUT
-localhost:9000
-/user
-?country=India&city=Delhi
-India
-Delhi
+/*
+Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host/Domain: 'localhost:9000',
+  port: '9000',
+  hostname: 'localhost',
+  hash: null,
+  search: '?country=India&city=Delhi',
+  query: [Object: null prototype] { country: 'India', city: 'Delhi' },
+  pathname: '/user',
+  path: '/user?country=India&city=Delhi',
+  href: 'http://localhost:9000/user?country=India&city=Delhi'
+}
 */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////req.url used in localhost
-///Steps-->http sever ---> grab url---> server.listen copy
+///Steps-->http sever ---> grab url---> server.listen
 
 const http = require('http');
 const url = require('url');
@@ -271,13 +259,15 @@ const url = require('url');
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' }); // text/json is also there
   const parsed = url.parse(req.url, true); //true, parses the query string into an object
+  const str = JSON.stringify(parsed, null, 2);
+  res.write(str);
+
   const name = parsed.query.name || 'N/A'; // NA should be there by chance if not have argument return error
   const age = parsed.query.age || 'N/A';
   const host = req.headers.host || 'N/A'; //req.headers.host--> for hostname
 
   // Concatenate query parameters with line breaks
-  const responseText = `Name: ${name}\nAge: ${age}\nHost: ${host}`;
-
+  const responseText = `Name: ${name} Age: ${age} Host: ${host}`;
   res.end(responseText);
 });
 
@@ -286,7 +276,12 @@ server.listen(8000, () => {
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+//HTTP Methods But not used much (Express)
+// GET: Used to retrieve data from the server.
+// POST: Used to submit data to be processed by the server.
+// PUT: Used to update data on the server.
+// DELETE: Used to delete data from the server.
+// PATCH: Used to partially update data on the server.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

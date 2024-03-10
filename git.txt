@@ -1,6 +1,6 @@
 ls
 cd\ -> to go back
-clear
+clear / cls
 mkdir -> to make directory
 
 
