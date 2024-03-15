@@ -1,0 +1,306 @@
+{
+  "courses": [
+    {
+      "id": "0",
+      "courseName": "React Js",
+      "authorName": "John Doe",
+      "courseDuration": "Duration: 10 hrs",
+      "courseRating": "Rating: 4.9"
+    },
+    {
+      "id": "1",
+      "courseName": "Node.js",
+      "authorName": "Jane Smith",
+      "courseDuration": "Duration: 8 hrs",
+      "courseRating": "Rating: 4.8"
+    },
+    {
+      "id": "2",
+      "courseName": "Python Programming",
+      "authorName": "Alice Johnson",
+      "courseDuration": "Duration: 12 hrs",
+      "courseRating": "Rating: 4.7"
+    },
+    {
+      "id": "3",
+      "courseName": "Data Structures and Algorithms",
+      "authorName": "Bob Williams",
+      "courseDuration": "Duration: 15 hrs",
+      "courseRating": "Rating: 4.5"
+    },
+    {
+      "id": "4",
+      "courseName": "HTML & CSS Basics",
+      "authorName": "Eva Brown",
+      "courseDuration": "Duration: 6 hrs",
+      "courseRating": "Rating: 4.6"
+    },
+    {
+      "id": "5",
+      "courseName": "JavaScript Fundamentals",
+      "authorName": "David Wilson",
+      "courseDuration": "Duration: 10 hrs",
+      "courseRating": "Rating: 4.7"
+    },
+    {
+      "id": "6",
+      "courseName": "Java Programming",
+      "authorName": "Sophia Martinez",
+      "courseDuration": "Duration: 12 hrs",
+      "courseRating": "Rating: 4.8"
+    },
+    {
+      "id": "7",
+      "courseName": "Database Management",
+      "authorName": "Michael Garcia",
+      "courseDuration": "Duration: 8 hrs",
+      "courseRating": "Rating: 4.6"
+    },
+    {
+      "id": "8",
+      "courseName": "Network Security",
+      "authorName": "Olivia Lopez",
+      "courseDuration": "Duration: 10 hrs",
+      "courseRating": "Rating: 4.9"
+    },
+    {
+      "id": "9",
+      "courseName": "Machine Learning Basics",
+      "authorName": "Daniel Lee",
+      "courseDuration": "Duration: 15 hrs",
+      "courseRating": "Rating: 4.8"
+    }
+  ],
+  "courseDetails": [
+    {
+      "id": "0",
+      "courseName": "React Js",
+      "introduction": "Learn the basics of React.js framework",
+      "theory": "Explore advanced concepts and best practices",
+      "conclusion": "Build real-world projects to solidify learning",
+      "topicsCovered": [
+        "React components and props",
+        "State management with hooks",
+        "Routing with React Router",
+        "Handling forms and user input",
+        "Working with APIs"
+      ],
+      "targetAudience": [
+        "Beginner to intermediate React developers",
+        "Web developers looking to learn React.js",
+        "Anyone interested in building modern web applications"
+      ],
+      "prerequisites": [
+        "Basic understanding of HTML, CSS, and JavaScript",
+        "Familiarity with ES6+ syntax"
+      ]
+    },
+    {
+      "id": "1",
+      "courseName": "Node.js",
+      "introduction": "Introduction to Node.js and its ecosystem",
+      "theory": "Learn asynchronous programming with Node.js",
+      "conclusion": "Build scalable server-side applications",
+      "topicsCovered": [
+        "Introduction to Node.js and NPM",
+        "Asynchronous JavaScript with callbacks and Promises",
+        "Building RESTful APIs with Express",
+        "Working with databases using MongoDB",
+        "Authentication and authorization"
+      ],
+      "targetAudience": [
+        "Web developers interested in server-side JavaScript",
+        "Those looking to build backend applications",
+        "Students and professionals wanting to learn Node.js"
+      ],
+      "prerequisites": [
+        "Basic understanding of JavaScript",
+        "Familiarity with web development concepts"
+      ]
+    },
+    {
+      "id": "2",
+      "courseName": "Python Programming",
+      "introduction": "Learn Python programming language fundamentals",
+      "theory": "Explore advanced topics such as data structures and algorithms",
+      "conclusion": "Build real-world Python applications",
+      "topicsCovered": [
+        "Python syntax and basic programming concepts",
+        "Data structures and algorithms",
+        "File handling and manipulation",
+        "Web scraping and automation",
+        "Introduction to Django framework"
+      ],
+      "targetAudience": [
+        "Beginners with no prior programming experience",
+        "Programmers transitioning to Python",
+        "Anyone interested in learning a versatile programming language"
+      ],
+      "prerequisites": [
+        "No prior programming experience required",
+        "Basic computer literacy"
+      ]
+    },
+    {
+      "id": "3",
+      "courseName": "Data Structures and Algorithms",
+      "introduction": "Understand fundamental data structures and algorithms",
+      "theory": "Analyze algorithmic problems and design efficient solutions",
+      "conclusion": "Apply knowledge to solve real-world programming challenges",
+      "topicsCovered": [
+        "Arrays and linked lists",
+        "Stacks, queues, and dequeues",
+        "Trees and graphs",
+        "Sorting and searching algorithms",
+        "Dynamic programming and greedy algorithms"
+      ],
+      "targetAudience": [
+        "Computer science students",
+        "Software engineers preparing for technical interviews",
+        "Anyone interested in algorithms and problem-solving"
+      ],
+      "prerequisites": [
+        "Basic knowledge of programming",
+        "Understanding of fundamental computer science concepts"
+      ]
+    },
+    {
+      "id": "4",
+      "courseName": "HTML & CSS Basics",
+      "introduction": "Learn the fundamentals of HTML and CSS",
+      "theory": "Explore styling techniques and layout design principles",
+      "conclusion": "Build responsive and visually appealing web pages",
+      "topicsCovered": [
+        "HTML5 elements and attributes",
+        "CSS selectors and properties",
+        "Layout techniques and CSS frameworks",
+        "Responsive web design principles",
+        "Best practices and optimization"
+      ],
+      "targetAudience": [
+        "Absolute beginners with no prior coding experience",
+        "Students and professionals seeking to learn web development basics",
+        "Designers looking to understand frontend technologies"
+      ],
+      "prerequisites": [
+        "No prior coding experience required",
+        "Basic computer skills"
+      ]
+    },
+    {
+      "id": "5",
+      "courseName": "JavaScript Fundamentals",
+      "introduction": "Master the fundamentals of JavaScript programming",
+      "theory": "Explore advanced topics such as closures and prototypes",
+      "conclusion": "Build interactive web applications with JavaScript",
+      "topicsCovered": [
+        "JavaScript syntax and basic programming concepts",
+        "Functions, arrays, and objects",
+        "DOM manipulation and event handling",
+        "Asynchronous JavaScript and Promises",
+        "ES6 features and modern JavaScript"
+      ],
+      "targetAudience": [
+        "Beginners with no prior JavaScript experience",
+        "Frontend developers looking to strengthen their JavaScript skills",
+        "Anyone interested in web development"
+      ],
+      "prerequisites": [
+        "Basic understanding of HTML and CSS",
+        "Some familiarity with programming concepts"
+      ]
+    },
+    {
+      "id": "6",
+      "courseName": "Java Programming",
+      "introduction": "Learn the basics of Java programming language",
+      "theory": "Explore object-oriented programming concepts and design patterns",
+      "conclusion": "Build Java applications and understand industry best practices",
+      "topicsCovered": [
+        "Java syntax and basic programming concepts",
+        "Object-oriented programming principles",
+        "Exception handling and file I/O",
+        "Java Collections Framework",
+        "Introduction to Java GUI programming"
+      ],
+      "targetAudience": [
+        "Beginners with no prior programming experience",
+        "Students studying computer science or software engineering",
+        "Professionals looking to switch to Java development"
+      ],
+      "prerequisites": [
+        "No prior programming experience required",
+        "Basic computer literacy"
+      ]
+    },
+    {
+      "id": "7",
+      "courseName": "Database Management",
+      "introduction": "Understand the fundamentals of database management systems",
+      "theory": "Learn database design, normalization, and relational algebra",
+      "conclusion": "Build and manage databases for web and enterprise applications",
+      "topicsCovered": [
+        "Introduction to relational databases",
+        "SQL fundamentals and querying",
+        "Database design and normalization",
+        "Transaction management and concurrency control",
+        "NoSQL databases and big data concepts"
+      ],
+      "targetAudience": [
+        "Students studying database management or computer science",
+        "Software developers interested in backend development",
+        "Database administrators and IT professionals"
+      ],
+      "prerequisites": [
+        "Basic understanding of computers and data storage",
+        "Some familiarity with SQL is beneficial but not required"
+      ]
+    },
+    {
+      "id": "8",
+      "courseName": "Network Security",
+      "introduction": "Learn the principles and practices of network security",
+      "theory": "Understand cryptographic techniques and secure network protocols",
+      "conclusion": "Implement security measures to protect networks and data",
+      "topicsCovered": [
+        "Introduction to network security concepts",
+        "Cryptography and encryption algorithms",
+        "Secure network protocols (SSL/TLS, IPSec)",
+        "Firewalls, VPNs, and intrusion detection systems",
+        "Security best practices and compliance standards"
+      ],
+      "targetAudience": [
+        "Students studying cybersecurity or computer networks",
+        "Network administrators and IT professionals",
+        "Anyone interested in learning about cybersecurity"
+      ],
+      "prerequisites": [
+        "Basic understanding of computer networks",
+        "Some familiarity with computer security concepts"
+      ]
+    },
+    {
+      "id": "9",
+      "courseName": "Machine Learning Basics",
+      "introduction": "Introduction to machine learning algorithms and techniques",
+      "theory": "Understand supervised and unsupervised learning methods",
+      "conclusion": "Apply machine learning models to real-world datasets",
+      "topicsCovered": [
+        "Fundamental concepts of machine learning",
+        "Supervised learning algorithms (regression, classification)",
+        "Unsupervised learning techniques (clustering, dimensionality reduction)",
+        "Model evaluation and validation",
+        "Introduction to deep learning and neural networks"
+      ],
+      "targetAudience": [
+        "Students studying machine learning or data science",
+        "Software engineers interested in AI and machine learning",
+        "Professionals seeking to apply machine learning in their field"
+      ],
+      "prerequisites": [
+        "Basic knowledge of mathematics and statistics",
+        "Some programming experience (Python recommended)"
+      ]
+    }
+  ]
+}
